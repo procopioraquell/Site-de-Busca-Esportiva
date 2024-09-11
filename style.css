@@ -1,0 +1,208 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+
+/* Estiliza o corpo da página */
+body{
+    font-family: "Chakra Petch", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    /*IMAGEM DE FUNDO*/
+    background-image: url( 'imagens/fundo2.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    
+}
+
+/* Estiliza os títulos h1 */
+h1{
+    font-size: 4rem;
+    color: #052651;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    margin-top: 1rem;
+    font-family: "Anton SC";
+}
+
+#modalidade{
+    font-size: 1.7rem;
+    color: #F5F7F8;
+    margin-top: 1.5rem;
+}
+
+
+/* Estiliza as seções da página */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Estiliza os inputs dentro das seções */
+section input{
+    width: 40rem;
+    border: none;
+    padding: 1.3rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    color: #45474b;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Estiliza os botões dentro das seções */
+section button{
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #052651;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+    background-color: #65b886;
+    color:white ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 60rem;
+    height: 46vh;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 0.50rem; 
+    padding: 1rem; 
+    border-radius: 1.5rem; 
+}    
+/* Estiliza cada item de resultado */
+.item-resultado{
+    background: #ffffff; 
+    border-radius: 0.6rem;
+    padding: 1rem; 
+    width: 800px;
+    margin-bottom: 1rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #052651; 
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #052651; 
+    margin: 0.5rem 0; 
+    padding: auto;
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none; 
+    color: #052651;
+    font-weight: bold;
+    font-size: 14px
+
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline; 
+    color: #65b886;
+}
+
+
+.color-retorno-busca{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style:oblique;
+    font-size: 3rem ;
+    color: rgb(243, 7, 7);
+    font-family: serif;
+    margin-top: -1rem;
+    
+    
+}
+/* Personalizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+  }
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color:white ; 
+    color: #45474B; 
+    text-align: center;
+    padding: 0; 
+    width: 100%;
+    height: 30px;
+     /*position: absolute; Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 0.80rem;
+    line-height: 5px; 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;  /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    section input {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+    }
+
+    .resultados-pesquisa {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem; 
+        letter-spacing: 0.1rem; 
+    }
+
+    section input {
+        width: 17rem; 
+    }
+
+    section button {
+        padding: 0.6rem 1rem; 
+        font-size: 0.9rem; 
+    }
+
+    .resultados-pesquisa {
+        width: 90%; 
+        height: 50vh; 
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 0.9rem; 
+    }
+}
